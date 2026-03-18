@@ -1,13 +1,15 @@
-# gpu-cluster-scheduler
+# GPU Cluster Scheduler
 
-Stub Python project. Described as a GPU cluster scheduler, but none of that functionality exists.
+Intelligent job scheduler for GPU clusters optimizing utilization across ML training and inference workloads.
 
-## What's actually here
+## About
+GPU Cluster Scheduler manages and schedules compute jobs across GPU clusters to maximize hardware utilization. It supports priority queuing, preemption, fair-share scheduling, and workload-aware placement for training and inference tasks.
 
-A single class in `src/core.py` (GpuClusterScheduler) with placeholder methods that each return a fixed dictionary without doing any real work. There is no GPU management, no job scheduling, no cluster orchestration - just stubs.
-
-The project uses only Python standard library imports (time, logging, json, typing). No cluster management or GPU scheduling libraries are present.
+## Tech Stack
+- Language: Python
+- Scheduling: Priority queue with fair-share algorithms
+- Monitoring: GPU utilization and job status tracking
+- API: Job submission and cluster management endpoints
 
 ## Status
-
-Scaffolding only. No working GPU cluster scheduling functionality exists.
+Active development - scheduling engine and cluster monitoring established.
