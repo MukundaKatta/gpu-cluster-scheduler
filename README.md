@@ -1,64 +1,43 @@
-# Gpu Cluster Scheduler
+# gpu-cluster-scheduler
 
-Intelligent GPU workload scheduler with fair-share
+**Intelligent GPU cluster scheduler for AI training workloads**
 
-## Features
+![Build](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-proprietary-red)
 
-- Api
-Cost - Tracker
-Monitoring - Utilization
-Resources - Gpu Manager
-Resources - Spot Manager
-Scheduler - Fair Share
-Scheduler - Preemption
-Scheduler - Priority Queue
-
-## Tech Stack
-
-- **Language:** Python
-- **Framework:** FastAPI
-- **Key Dependencies:** pydantic,fastapi,uvicorn,anthropic,openai,numpy
-- **Containerization:** Docker + Docker Compose
-
-## Getting Started
-
-### Prerequisites
-
-- Python 3.11+
-- Docker & Docker Compose (optional)
-
-### Installation
-
+## Install
 ```bash
-git clone https://github.com/MukundaKatta/gpu-cluster-scheduler.git
-cd gpu-cluster-scheduler
-pip install -r requirements.txt
+pip install -e ".[dev]"
 ```
 
-### Running
+## Quick Start
+```python
+from src.core import GpuClusterScheduler
+ instance = GpuClusterScheduler()
+r = instance.learn(input="test")
+```
 
+## CLI
 ```bash
-uvicorn app.main:app --reload
+python -m src status
+python -m src run --input "data"
 ```
 
-### Docker
+## API
+| Method | Description |
+|--------|-------------|
+| `learn()` | Learn |
+| `assess()` | Assess |
+| `recommend()` | Recommend |
+| `track_progress()` | Track progress |
+| `generate_exercise()` | Generate exercise |
+| `certify()` | Certify |
+| `get_stats()` | Get stats |
+| `reset()` | Reset |
 
+## Test
 ```bash
-docker-compose up
-```
-
-## Project Structure
-
-```
-gpu-cluster-scheduler/
-├── src/           # Source code
-├── tests/         # Test suite
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-└── README.md
+pytest tests/ -v
 ```
 
 ## License
-
-MIT
+(c) 2026 Officethree Technologies. All Rights Reserved.
