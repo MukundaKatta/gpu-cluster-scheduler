@@ -1,41 +1,13 @@
 # gpu-cluster-scheduler
 
-**Intelligent GPU cluster scheduler for AI training workloads**
+Stub Python project. Described as a GPU cluster scheduler, but none of that functionality exists.
 
-![Build](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-proprietary-red)
+## What's actually here
 
-## Install
-```bash
-pip install -e ".[dev]"
-```
+A single class in `src/core.py` (GpuClusterScheduler) with placeholder methods that each return a fixed dictionary without doing any real work. There is no GPU management, no job scheduling, no cluster orchestration - just stubs.
 
-## Quick Start
-```python
-from src.core import GpuClusterScheduler
- instance = GpuClusterScheduler()
-r = instance.learn(input="test")
-```
+The project uses only Python standard library imports (time, logging, json, typing). No cluster management or GPU scheduling libraries are present.
 
-## CLI
-```bash
-python -m src status
-python -m src run --input "data"
-```
+## Status
 
-## API
-| Method | Description |
-|--------|-------------|
-| `learn()` | Learn |
-| `assess()` | Assess |
-| `recommend()` | Recommend |
-| `track_progress()` | Track progress |
-| `generate_exercise()` | Generate exercise |
-| `certify()` | Certify |
-| `get_stats()` | Get stats |
-| `reset()` | Reset |
-
-## Test
-```bash
-pytest tests/ -v
-```
-
+Scaffolding only. No working GPU cluster scheduling functionality exists.
